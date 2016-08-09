@@ -8,10 +8,17 @@
 MyTreeView::MyTreeView(QTreeView *parent)
   : QTreeView(parent)
 {
-  connect(this, SIGNAL(clicked(QModelIndex)), SLOT(onClick()));
+  connect(this, SIGNAL(clicked(QModelIndex)), SLOT(onClick(QModelIndex)));
 }
 
-void MyTreeView::onClick()
+void MyTreeView::onClick(QModelIndex index)
 {
-  qDebug() << "Here\n";
+  qDebug() << index.data(Qt::DisplayRole).toString() << '\n';
+
+  if (index.column() == 0) {
+    qDebug() << "Switch Molecule!\n";
+  }
+  else if (index.column() == 1) {
+    qDebug()  << "Delete Molecule!\n";
+  }
 }

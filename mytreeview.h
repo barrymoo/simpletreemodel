@@ -15,7 +15,7 @@ class MyTreeView : public QTreeView {
     MyTreeView(QTreeView *parent = 0);
 
   private slots:
-    void onClick();
+    void onClick(QModelIndex);
 };
 
 

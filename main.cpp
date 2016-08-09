@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
   MyTreeView *treeView = new MyTreeView();
   treeView->setModel(&model);
-  treeView->setWindowTitle(QObject::tr("MyTreeView"));
+  treeView->setWindowTitle(QObject::tr("Molecules"));
   treeView->show();
 
 //  QTreeView *view = new QTreeView();

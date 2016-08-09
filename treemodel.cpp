@@ -11,7 +11,7 @@ TreeModel::TreeModel(const QString &data, QObject *parent)
     : QAbstractItemModel(parent)
 {
   QList<QVariant> rootData;
-  rootData << "Title" << "Summary";
+  rootData << "Molecule" << "Delete";
   rootItem = new TreeItem(rootData);
   setupModelData(data.split(QString("\n")), rootItem);
 }
